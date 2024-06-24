@@ -1,5 +1,6 @@
 from rembg import remove
 from PIL import Image
+import os
 
 # Удаление фона и сохранение изображения
 input_path = 'try.jpg'  # название фото
@@ -28,3 +29,7 @@ img = Image.open('line_photo.png')  # открытие нового фото с 
 img.thumbnail(size=(512, 512))  # уменьшение фото
 # img.show()
 img.save('final_photo.png')  # сохранение нового фото
+
+os.remove('line_photo.png')
+os.remove('output_test_photo.png')
+# os.remove('try.jpg')
